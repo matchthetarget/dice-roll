@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get("/", { :controller => "application", :action => "render_homepage" })
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get("/dice/:number_of_dice/:how_many_sides", { :controller => "application", :action => "dice_roll" })
 end
